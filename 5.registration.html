@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>ثبت اطلاعات مهمان</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Tahoma,Arial,sans-serif;
+background:linear-gradient(135deg,#e9f8fa,#e1f2f7);
+color:#123b50;
+}
+
+.page{
+width:100%;
+max-width:650px;
+margin:auto;
+padding:25px 18px 50px;
+}
+
+.top{
+text-align:center;
+padding:35px 15px 25px;
+}
+
+.icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 18px;
+border-radius:50px;
+background:#dff5f2;
+color:#087f73;
+font-size:12px;
+margin-bottom:18px;
+}
+
+h1{
+margin:0;
+font-size:32px;
+color:#103c56;
+line-height:1.6;
+}
+
+.top p{
+color:#64748b;
+line-height:2;
+}
+
+.form-card{
+background:white;
+padding:28px 22px;
+border-radius:30px;
+box-shadow:0 15px 45px rgba(15,61,86,.1);
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+color:#164e63;
+font-weight:bold;
+font-size:14px;
+}
+
+input,
+select{
+width:100%;
+padding:14px;
+border:1px solid #d5e6eb;
+border-radius:15px;
+background:#f9fcfd;
+color:#123b50;
+font-family:inherit;
+font-size:15px;
+outline:none;
+}
+
+input:focus,
+select:focus{
+border-color:#0d9488;
+box-shadow:0 0 0 4px rgba(13,148,136,.1);
+}
+
+.submit-button{
+width:100%;
+border:none;
+padding:16px;
+border-radius:50px;
+background:linear-gradient(135deg,#087f73,#126782);
+color:white;
+font-family:inherit;
+font-size:16px;
+cursor:pointer;
+margin-top:8px;
+}
+
+.success{
+display:none;
+margin-top:25px;
+padding:25px 18px;
+border-radius:25px;
+background:#ecfdf5;
+color:#065f46;
+text-align:center;
+}
+
+.entry-code{
+margin:20px 0;
+padding:18px;
+border-radius:18px;
+background:#dff7f4;
+}
+
+.entry-code span{
+display:block;
+margin-top:7px;
+font-size:25px;
+font-weight:bold;
+letter-spacing:2px;
+color:#075e54;
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:25px;
+color:#126782;
+text-decoration:none;
+font-size:14px;
+}
+
+footer{
+text-align:center;
+margin-top:35px;
+color:#78909c;
+font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="top">
+
+<div class="icon">
+🎟️
+</div>
+
+<div class="badge">
+GUEST REGISTRATION
+</div>
+
+<h1>
+ثبت اطلاعات مهمان
+</h1>
+
+<p>
+برای حضور در نمایشگاه،
+اطلاعات خود را وارد کنید.
+</p>
+
+</div>
+
+
+<div class="form-card">
+
+<form id="guestForm">
+
+
+<div class="form-group">
+
+<label for="name">
+نام و نام خانوادگی
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="مثلاً سارا احمدی"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="nationalCode">
+کد ملی
+</label>
+
+<input
+type="text"
+id="nationalCode"
+placeholder="کد ملی ۱۰ رقمی"
+inputmode="numeric"
+maxlength="10"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="university">
+دانشگاه
+</label>
+
+<input
+type="text"
+id="university"
+placeholder="نام دانشگاه"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="major">
+رشته / گرایش
+</label>
+
+<input
+type="text"
+id="major"
+placeholder="مثلاً مهندسی پزشکی"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="section">
+بخش موردنظر برای بازدید
+</label>
+
+<select id="section" required>
+
+<option value="">
+لطفاً بخش موردنظر را انتخاب کنید
+</option>
+
+<option value="medical-equipment">
+🦿 تجهیزات پزشکی
+</option>
+
+<option value="prosthetics">
+🦾 پروتز و ایمپلنت
+</option>
+
+<option value="medical-imaging">
+🔬 تصویربرداری پزشکی
+</option>
+
+<option value="tissue-engineering">
+🧬 مهندسی بافت
+</option>
+
+<option value="medical-robotics">
+🤖 رباتیک پزشکی
+</option>
+
+<option value="new-technologies">
+💡 فناوری‌های نوین
+</option>
+
+</select>
+
+</div>
+
+
+<button
+type="submit"
+class="submit-button"
+>
+ثبت اطلاعات
+</button>
+
+</form>
+
+
+<div
+class="success"
+id="successMessage"
+>
+
+<h2>
+ثبت اطلاعات با موفقیت انجام شد ✓
+</h2>
+
+<p id="welcomeText"></p>
+
+<div class="entry-code">
+
+کد ورود شما:
+
+<span id="entryCode"></span>
+
+</div>
+
+<p>
+این کد را هنگام ورود به نمایشگاه
+همراه داشته باشید.
+</p>
+
+</div>
+
+</div>
+
+
+<a
+href="guide.html"
+class="back"
+>
+← بازگشت به راهنمای بازدید
+</a>
+
+
+<footer>
+
+Biomedical Engineering Exhibition
+<br>
+علم • فناوری • نوآوری
+
+</footer>
+
+</div>
+
+
+<script>
+
+const form =document.getElementById("guestForm");
+
+
+form.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+
+const name =
+document
+.getElementById("name")
+.value
+.trim();
+
+
+const nationalCode =
+document
+.getElementById("nationalCode")
+.value
+.trim();
+
+
+if(!/^\d{10}$/.test(nationalCode)){
+
+alert(
+"لطفاً کد ملی را به صورت ۱۰ رقمی وارد کنید."
+);
+
+return;
+
+}
+
+
+const entryCode =
+"BME-" +
+Math.floor(
+1000 + Math.random() * 9000
+);
+
+
+document
+.getElementById("welcomeText")
+.textContent =
+name +
+" عزیز، خوشحالیم که در نمایشگاه همراه ما هستید.";
+
+
+document
+.getElementById("entryCode")
+.textContent =
+entryCode;
+
+
+form.style.display="none";
+
+
+document
+.getElementById("successMessage")
+.style.display="block";
+
+
+document
+.getElementById("successMessage")
+.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+);
+
+</script>
+
+</body>
+
+</html>
